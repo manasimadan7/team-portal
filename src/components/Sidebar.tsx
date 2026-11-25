@@ -62,6 +62,10 @@ export default function Sidebar({ active, onNavigate }: Props) {
             onClick={() => onNavigate(item.id)}
           >
             <img src={state.icon} alt="" width={item.size} height={item.size} />
+            {/* label shows only in the phone tab bar */}
+            <span className="sidebar__label" aria-hidden>
+              {item.label}
+            </span>
           </button>
         )
       })}

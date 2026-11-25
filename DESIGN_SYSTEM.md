@@ -15,7 +15,7 @@ Pages built so far: **Home** (node `263:1720`), **Resume verification** (nodes `
 ## Responsive (phones)
 - **≥ 900px wide** (laptop, desktop, tablet landscape): the scaled 1728×1117 artboard above.
 - **≤ 899px wide** (phones, tablet portrait): no scaling — every page reflows via its `@media (max-width: 899px)` block. Positions from Figma are overridden to normal document flow, stacked in one column with 16px gutters.
-- Sidebar → **bottom tab bar** (68px, purple, rounded top; active tab = white 50px circle with the dark icon).
+- Sidebar → **floating pill tab bar**: purple, 72px tall, 36px radius, 12px in from the screen edges and bottom. Each tab shows an icon with a 12px white label. The active tab is an 84px white circle that rises 22px out of the bar, ringed 6px in purple, with the dark icon and a purple label. The chat button sits above it (bottom 124px), and the chat panel stops at 96px.
 - Chat button floats above the tab bar; chat opens full-screen. The mail composer is pinned to the bottom and scaled to the screen width; the AI agent card floats at the top.
 - Tables become stacked cards (Team), horizontal filter rows scroll sideways (chips, roles, students), the Company detail chart becomes horizontal bars.
 - Minimum tap target on phones is ~36–40px; inputs use 16px text so iOS doesn't zoom on focus.

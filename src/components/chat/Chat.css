@@ -360,7 +360,7 @@
     left: auto;
     top: auto;
     right: 16px;
-    bottom: 84px;
+    bottom: 124px; /* clears the floating tab bar and its raised active circle */
     width: 54px;
     height: 54px;
     z-index: 45;
@@ -373,7 +373,7 @@
     left: 0;
     top: 0;
     right: 0;
-    bottom: 68px;
+    bottom: 96px;
     width: auto;
     height: auto;
     z-index: 44;

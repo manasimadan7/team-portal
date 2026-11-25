@@ -63,23 +63,29 @@
   }
 }
 
-/* ---------- Phone: bottom tab bar ---------- */
+.sidebar__label {
+  display: none;
+}
+
+/* ---------- Phone: floating pill tab bar ----------
+   Icon + label per tab; the active tab sits in a white circle that rises out of the bar,
+   ringed in the bar colour so it reads as cut out of it. */
 @media (max-width: 899px) {
   .sidebar {
     position: fixed;
-    left: 0;
-    right: 0;
+    left: 12px;
+    right: 12px;
     top: auto;
-    bottom: 0;
+    bottom: calc(12px + env(safe-area-inset-bottom));
     width: auto;
-    height: 68px;
+    height: 72px;
     z-index: 40;
     display: flex;
     align-items: center;
     justify-content: space-around;
-    padding: 0 12px env(safe-area-inset-bottom);
-    border-radius: 22px 22px 0 0;
-    box-shadow: 0 -4px 18px rgba(70, 60, 100, 0.18);
+    padding: 0 8px;
+    border-radius: 36px;
+    box-shadow: 0 8px 24px rgba(70, 60, 100, 0.22);
   }
   .sidebar__indicator {
     display: none;
@@ -88,20 +94,50 @@
     position: relative;
     left: auto !important;
     top: auto !important;
-    width: 50px !important;
-    height: 50px !important;
+    flex: 1 1 0;
+    width: auto !important;
+    height: 72px !important;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-  }
-  .sidebar__item::before {
-    inset: 0;
+    gap: 4px;
+    border-radius: 36px;
+    transition: transform 0.2s ease;
   }
   .sidebar__item img {
-    width: 28px;
-    height: 28px;
+    width: 26px;
+    height: 26px;
+  }
+  .sidebar__label {
+    display: block;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1;
+    color: #fff;
+    white-space: nowrap;
+  }
+  /* press halo stays inside the bar */
+  .sidebar__item::before {
+    inset: 8px 4px;
+    border-radius: 28px;
+  }
+
+  /* active tab: raised white circle */
+  .sidebar__item[aria-current] {
+    flex: 0 0 auto;
+    width: 84px !important;
+    height: 84px !important;
+    margin: 0 4px;
+    transform: translateY(-22px);
+    border-radius: 50%;
+    background: #fff;
+    box-shadow: 0 0 0 6px var(--primary);
   }
   .sidebar__item[aria-current]::before {
-    background: #fff;
+    display: none;
+  }
+  .sidebar__item[aria-current] .sidebar__label {
+    color: var(--primary);
   }
 }
