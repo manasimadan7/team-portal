@@ -1,0 +1,100 @@
+/* Colours/widths taken from the Figma scrollbar vectors of each page. */
+.strack {
+  position: absolute;
+  z-index: 2;
+  border-radius: 999px;
+  cursor: pointer;
+  touch-action: none;
+  transition: opacity 0.2s ease;
+}
+.strack.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+.strack__thumb {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  border-radius: 999px;
+  cursor: grab;
+  transition: background-color 0.15s ease, width 0.15s ease, margin 0.15s ease;
+}
+.strack.is-dragging .strack__thumb {
+  cursor: grabbing;
+}
+
+/* Home — 10px #EADDFF track, rgba(177,143,215,.3) thumb (263:1723/1724) */
+.strack--home {
+  width: 10px;
+  background: #eaddff;
+}
+.strack--home .strack__thumb {
+  width: 10px;
+  margin-left: -5px;
+  background: rgba(177, 143, 215, 0.3);
+}
+.strack--home:hover .strack__thumb {
+  background: rgba(177, 143, 215, 0.55);
+}
+.strack--home.is-dragging .strack__thumb {
+  background: rgba(147, 120, 175, 0.8);
+}
+
+/* Companies — 10px rgba(177,143,215,.1) track, .3 thumb (282:10955/6) */
+.strack--companies {
+  width: 10px;
+  background: rgba(177, 143, 215, 0.1);
+}
+.strack--companies .strack__thumb {
+  width: 10px;
+  margin-left: -5px;
+  background: rgba(177, 143, 215, 0.3);
+}
+.strack--companies:hover .strack__thumb {
+  background: rgba(177, 143, 215, 0.55);
+}
+.strack--companies.is-dragging .strack__thumb {
+  background: rgba(147, 120, 175, 0.8);
+}
+
+/* Resume — hairline rgba(177,143,215,.2) track, rgba(147,120,175,.7) thumb (310:14340/1)
+   with a wider invisible hit area */
+.strack--resume {
+  width: 12px;
+  margin-left: -6px;
+  background: linear-gradient(to right, transparent 5px, rgba(177, 143, 215, 0.2) 5px, rgba(177, 143, 215, 0.2) 7px, transparent 7px);
+}
+.strack--resume .strack__thumb {
+  width: 2px;
+  margin-left: -1px;
+  background: rgba(147, 120, 175, 0.7);
+}
+.strack--resume:hover .strack__thumb,
+.strack--resume.is-dragging .strack__thumb {
+  width: 6px;
+  margin-left: -3px;
+  background: rgba(119, 89, 184, 0.85);
+}
+
+/* Team — 4px #D1D9E0 track, #59636E thumb (263:3299/3300) */
+.strack--team {
+  width: 4px;
+  background: var(--surface-subtle-alt-7);
+}
+.strack--team .strack__thumb {
+  width: 4px;
+  margin-left: -2px;
+  background: var(--surface-accent-alt-15);
+}
+.strack--team:hover .strack__thumb,
+.strack--team.is-dragging .strack__thumb {
+  width: 8px;
+  margin-left: -4px;
+  background: #3d454e;
+}
+
+@media (max-width: 899px) {
+  .strack {
+    display: none;
+  }
+}

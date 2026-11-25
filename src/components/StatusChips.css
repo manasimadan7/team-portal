@@ -1,0 +1,80 @@
+/* Status filter chips with count bubble (Figma 263:1829 / 282:10959). Shared by Home + Companies. */
+.chip {
+  flex-shrink: 0;
+  height: 41px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 7.222px 0;
+  border-radius: var(--radius-pill);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: -0.4333px;
+  white-space: nowrap;
+  transition: box-shadow 0.15s ease;
+}
+.chip.is-active {
+  box-shadow: inset 0 0 0 1.5px currentColor;
+}
+.chip__count {
+  flex-shrink: 0;
+  width: 33px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 7px 13px;
+  background: var(--surface-base-primary);
+  border-radius: var(--radius-20);
+}
+.chip__count p {
+  width: 10px;
+  text-align: center;
+}
+
+.chip--contacted {
+  width: 140px;
+  gap: 14.444px;
+  padding-left: 7.222px;
+  background: var(--status-contacted-bg);
+  color: var(--status-contacted-fg);
+}
+.chip--iaf-filled {
+  gap: 8px;
+  padding-left: 15px;
+  padding-right: 5px;
+  background: var(--status-success-surface);
+  color: var(--text-default-alt-16);
+}
+.chip--shortlist {
+  gap: 7px;
+  padding-left: 12px;
+  padding-right: 4px;
+  background: var(--status-shortlist-bg);
+  color: var(--text-default-alt-14);
+}
+.chip--shortlist .chip__count {
+  width: 34px;
+}
+.chip--reject {
+  width: 112px;
+  gap: 14.444px;
+  padding-left: 7.222px;
+  background: var(--status-reject-bg);
+  color: var(--status-reject-fg);
+}
+.chip--reject .chip__count {
+  width: 32px;
+  color: var(--status-reject-bg);
+}
+.chip--interviews {
+  gap: 14.444px;
+  padding: 7.222px;
+  background: var(--surface-accent-primary);
+  color: var(--text-strong-primary);
+}
+.chip--interviews .chip__count {
+  width: 26px;
+  color: var(--text-default-alt-3);
+}

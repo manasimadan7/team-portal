@@ -1,0 +1,327 @@
+/*
+ * Interaction states for every control: hover · pressed (active) · keyboard focus · disabled.
+ * Grouped by control type so each family behaves consistently. Loaded after page styles.
+ */
+
+/* ---------- Base ---------- */
+button,
+a,
+summary,
+[role='tab'],
+[role='radio'] {
+  -webkit-tap-highlight-color: transparent;
+}
+button:disabled {
+  cursor: not-allowed;
+}
+:where(button, a, [role='tab'], [role='radio'], [contenteditable]):focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+:where(input, textarea):focus-visible {
+  outline: none;
+}
+
+/* ---------- 1. Icon buttons (image-only) — lavender halo on hover, deeper + shrink on press ---------- */
+.ib,
+.company-row__actions button,
+.co-row__actions button,
+.co-row__actions a,
+.open-row__drop,
+.rp-card__send,
+.rp-card__check--approved,
+.composer__icon,
+.composer__trash {
+  border-radius: 50%;
+  transition: background-color 0.15s ease, transform 0.1s ease;
+}
+.ib:hover,
+.company-row__actions button:hover,
+.co-row__actions button:hover,
+.co-row__actions a:hover,
+.open-row__drop:hover,
+.rp-card__send:hover,
+.rp-card__check--approved:hover {
+  background-color: rgba(119, 89, 184, 0.09);
+}
+.ib:active,
+.company-row__actions button:active,
+.co-row__actions button:active,
+.co-row__actions a:active,
+.open-row__drop:active,
+.rp-card__send:active,
+.rp-card__check--approved:active {
+  background-color: rgba(119, 89, 184, 0.18);
+  transform: scale(0.92);
+}
+.ib.is-on {
+  background-color: rgba(119, 89, 184, 0.12);
+}
+
+/* ---------- 2. Icon buttons with their own surface — tint + press ---------- */
+.view-toggle,
+.team-toggle,
+.cp-icon-btn,
+.viewer__btn,
+.viewer__zoom,
+.review__fab,
+.rp-btn--clip,
+.team-row__chat {
+  transition: filter 0.15s ease, transform 0.1s ease, box-shadow 0.15s ease, opacity 0.15s ease;
+}
+.view-toggle:hover,
+.team-toggle:hover,
+.cp-icon-btn:hover,
+.viewer__btn:not(:disabled):hover,
+.viewer__zoom:hover,
+.review__fab:hover,
+.rp-btn--clip:hover,
+.team-row__chat:hover {
+  filter: brightness(0.95);
+}
+.view-toggle:active,
+.team-toggle:active,
+.cp-icon-btn:active,
+.viewer__btn:not(:disabled):active,
+.viewer__zoom:active,
+.review__fab:active,
+.rp-btn--clip:active,
+.team-row__chat:active {
+  filter: brightness(0.88);
+  transform: scale(0.93);
+}
+/* selected toggles get a primary ring */
+.view-toggle.is-active,
+.cp-icon-btn.is-active {
+  box-shadow: 0 0 0 2px rgba(119, 89, 184, 0.45);
+}
+.team-toggle.is-active > img {
+  filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25)) drop-shadow(0 0 0 rgba(119, 89, 184, 0));
+}
+.team-toggle {
+  border-radius: 50%;
+}
+.team-toggle.is-active {
+  box-shadow: 0 0 0 2px rgba(119, 89, 184, 0.45);
+}
+
+/* ---------- 3. Filled buttons ---------- */
+/* light surfaces */
+.add-company,
+.rp-btn--feedback,
+.open-btn--tag,
+.open-btn--claim.is-claimed,
+.status-picker__opt,
+.btn-ghost {
+  transition: filter 0.15s ease, transform 0.1s ease, box-shadow 0.15s ease, background-color 0.15s ease;
+}
+.add-company:hover,
+.rp-btn--feedback:hover,
+.open-btn--tag:hover,
+.open-btn--claim.is-claimed:hover,
+.btn-ghost:hover {
+  filter: brightness(0.95);
+}
+.add-company:active,
+.rp-btn--feedback:active,
+.open-btn--tag:active,
+.open-btn--claim.is-claimed:active,
+.btn-ghost:active {
+  filter: brightness(0.88);
+  transform: scale(0.96);
+}
+.add-company.is-on {
+  box-shadow: 0 0 0 2px rgba(119, 89, 184, 0.35);
+}
+/* primary (purple) surfaces */
+.rp-btn--approve,
+.open-btn--claim:not(.is-claimed),
+.btn-primary,
+.chat-send,
+.chat-launcher {
+  transition: filter 0.15s ease, transform 0.1s ease, box-shadow 0.15s ease;
+}
+.rp-btn--approve:hover,
+.open-btn--claim:not(.is-claimed):hover,
+.btn-primary:hover {
+  filter: brightness(1.1);
+  box-shadow: 0 2px 8px rgba(119, 89, 184, 0.35);
+}
+.rp-btn--approve:active,
+.open-btn--claim:not(.is-claimed):active,
+.btn-primary:active {
+  filter: brightness(0.9);
+  transform: scale(0.96);
+  box-shadow: none;
+}
+
+/* shared small buttons used by new forms */
+.btn-primary,
+.btn-ghost {
+  height: 36px;
+  padding: 0 18px;
+  border-radius: var(--radius-8);
+  font-size: 14px;
+  font-weight: 500;
+}
+.btn-primary {
+  background: var(--primary);
+  color: #fff;
+}
+.btn-ghost {
+  background: var(--light-accent-l);
+  color: var(--primary);
+}
+
+/* ---------- 4. Chips, tabs, pills ---------- */
+.chip,
+.team-role,
+.team-legend__pill,
+.segmented__item,
+.student {
+  transition: filter 0.15s ease, transform 0.1s ease, box-shadow 0.15s ease, background-color 0.15s ease, color 0.15s ease;
+}
+.chip:hover,
+.team-role:hover,
+.team-legend__pill:hover {
+  filter: brightness(0.96);
+}
+.chip:active,
+.team-role:active,
+.team-legend__pill:active {
+  filter: brightness(0.9);
+  transform: scale(0.96);
+}
+.segmented__item:not(.is-active):hover {
+  color: var(--text-default-alt-1);
+  background: rgba(119, 89, 184, 0.08);
+  border-radius: 29.917px;
+}
+.segmented__item:not(.is-active):active {
+  transform: scale(0.96);
+  background: rgba(119, 89, 184, 0.16);
+}
+.student:active .student__name {
+  transform: scale(0.97);
+}
+.student__name {
+  transition: color 0.15s ease, transform 0.1s ease;
+}
+
+/* ---------- 5. Text links ---------- */
+.open-row__source,
+.poc__line {
+  transition: color 0.15s ease, opacity 0.15s ease;
+}
+.open-row__source:hover {
+  color: var(--dark-accent-l);
+  text-decoration-thickness: 2px;
+}
+.open-row__source:active,
+.poc__line:active {
+  opacity: 0.6;
+}
+.poc__line:hover {
+  color: var(--primary);
+}
+
+/* Company names → company detail page */
+.co-link {
+  display: inline;
+  padding: 0;
+  font: inherit;
+  font-variation-settings: inherit;
+  line-height: inherit;
+  letter-spacing: inherit;
+  color: inherit;
+  text-align: left;
+  border-radius: 4px;
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  text-underline-offset: 3px;
+  transition: color 0.15s ease, text-decoration-color 0.15s ease;
+}
+.co-link:hover {
+  color: var(--primary);
+  text-decoration-color: currentColor;
+}
+.co-link:active {
+  opacity: 0.7;
+}
+
+/* ---------- 6. Clickable cards & rows ---------- */
+.rp-card {
+  transition: height 0.2s ease, box-shadow 0.15s ease;
+}
+.rp-card:not(.is-selected):hover {
+  box-shadow: 0 4px 14px rgba(119, 89, 184, 0.1);
+}
+.rp-card:not(.is-selected):hover::after {
+  border-color: rgba(119, 89, 184, 0.45);
+}
+.rp-card:active {
+  box-shadow: 0 1px 4px rgba(119, 89, 184, 0.12);
+}
+.co-row,
+.open-row {
+  transition: box-shadow 0.15s ease;
+}
+.co-row:hover,
+.open-row:hover {
+  box-shadow: 0 4px 16px rgba(70, 60, 100, 0.07);
+}
+
+/* ---------- 7. Text inputs & search fields ---------- */
+.search,
+.cp-search,
+.team-search,
+.chat-search,
+.notes__form input,
+.add-form input,
+.tag-picker__input {
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+.search:hover,
+.cp-search--outlined:hover,
+.team-search:hover,
+.chat-search:hover,
+.notes__form input:hover,
+.add-form input:hover,
+.tag-picker__input:hover {
+  border-color: var(--surface-accent-alt-1);
+}
+.search:focus-within,
+.cp-search:focus-within,
+.team-search:focus-within,
+.chat-search:focus,
+.notes__form input:focus,
+.add-form input:focus,
+.tag-picker__input:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(119, 89, 184, 0.15);
+}
+.cp-search:not(.cp-search--outlined):focus-within {
+  box-shadow: 0 0 0 2px var(--primary);
+}
+
+/* ---------- Touch devices: no sticky hover, bigger press feedback ---------- */
+@media (hover: none) {
+  .rp-card:not(.is-selected):hover,
+  .co-row:hover,
+  .open-row:hover {
+    box-shadow: none;
+  }
+  .team-row__chat,
+  .notes__done {
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}

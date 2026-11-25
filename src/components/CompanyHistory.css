@@ -1,0 +1,135 @@
+/* Company history (approx. 139:1979 — M3 list item timeline) */
+.co-history {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 0 24px 32px;
+  font-family: 'Roboto', sans-serif;
+  font-variation-settings: normal;
+  animation: history-in 0.2s ease-out;
+}
+.co-history__list {
+  display: flex;
+  flex-direction: column;
+  gap: 17px;
+  min-width: 0;
+}
+.co-history__row {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+.co-history__date {
+  flex-shrink: 0;
+  min-width: 92px;
+  font-size: 15px;
+  line-height: 28px;
+  opacity: 0.75;
+  white-space: nowrap;
+  color: var(--text-inverse-primary);
+}
+.co-history__text {
+  width: 301px;
+  min-height: 28px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.25px;
+  color: var(--text-default-alt-2);
+}
+.co-history__text p:only-child {
+  padding-top: 4px;
+}
+.co-history__input {
+  width: 301px;
+  height: 30px;
+  padding: 0 10px;
+  background: var(--surface-base-primary);
+  border: var(--stroke-1) solid var(--border-alt-9);
+  border-radius: 5px;
+  outline: none;
+  font-family: inherit;
+  font-size: 14px;
+  letter-spacing: 0.25px;
+  color: var(--text-default-alt-2);
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+.co-history__input:hover {
+  border-color: var(--surface-accent-alt-1);
+}
+.co-history__input:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(119, 89, 184, 0.15);
+}
+
+/* Compact variant for the Home "My Companies" panel */
+.co-history--compact {
+  padding: 4px 24px 20px;
+}
+.co-history--compact .co-history__list {
+  gap: 10px;
+}
+.co-history--compact .co-history__date {
+  min-width: 74px;
+  font-size: 12px;
+  line-height: 22px;
+  opacity: 0.75;
+}
+.co-history--compact .co-history__text {
+  width: 360px;
+  min-height: 22px;
+}
+.co-history--compact .co-history__text p:only-child {
+  padding-top: 1px;
+}
+.co-history--compact .co-history__input {
+  width: 360px;
+}
+
+@keyframes history-in {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+}
+
+@media (max-width: 899px) {
+  .co-history,
+  .co-history--compact {
+    padding: 4px 16px 16px;
+  }
+  .co-history__date {
+    min-width: 84px;
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .co-history--compact .co-history__date {
+    min-width: 66px;
+    font-size: 11px;
+    line-height: 20px;
+  }
+  .co-history__text,
+  .co-history--compact .co-history__text {
+    width: auto;
+    flex: 1;
+    min-height: 20px;
+  }
+  .co-history__text p:only-child {
+    padding-top: 0;
+  }
+  .co-history__row {
+    width: 100%;
+  }
+  .co-history__list {
+    width: 100%;
+  }
+  .co-history__input,
+  .co-history--compact .co-history__input {
+    width: auto;
+    flex: 1;
+    min-width: 0;
+    height: 36px;
+  }
+}

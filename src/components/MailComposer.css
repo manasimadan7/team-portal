@@ -1,0 +1,291 @@
+/*
+ * Positions are Figma artboard px (frame 293:11993). The window chrome + toolbar are the
+ * exported compose image; editable fields are laid over the baked-in text at the image's
+ * scale (569.774 / 662 = 0.8607).
+ */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}
+
+/* ---------- AI agent card ---------- */
+.agent-card {
+  position: absolute;
+  left: 664px;
+  top: 866px;
+  width: 290px;
+  height: 203px;
+  z-index: 15;
+  border: 1px solid var(--light-accent-l);
+  border-radius: 40px;
+  background-image: url("data:image/svg+xml;utf8,<svg viewBox='0 0 290 203' xmlns='http://www.w3.org/2000/svg' preserveAspectRatio='none'><rect x='0' y='0' height='100%' width='100%' fill='url(%23grad)' opacity='1'/><defs><radialGradient id='grad' gradientUnits='userSpaceOnUse' cx='0' cy='0' r='10' gradientTransform='matrix(12.39 36.1 -51.571 21.958 13.916 -31)'><stop stop-color='rgba(125,113,153,1)' offset='0'/><stop stop-color='rgba(166,150,204,1)' offset='0.24255'/><stop stop-color='rgba(208,188,255,1)' offset='0.4851'/><stop stop-color='rgba(255,255,255,1)' offset='1'/></radialGradient></defs></svg>");
+  background-size: 100% 100%;
+  box-shadow: inset 0 4px 4px 0 var(--light-accent-l);
+  animation: agent-in 0.35s ease-out;
+}
+.agent-card__icon {
+  position: absolute;
+  left: calc(686px - 664px - 3.714px);
+  top: calc(897px - 866px);
+}
+.agent-card__note {
+  position: absolute;
+  left: calc(754px - 664px);
+  top: calc(914px - 866px);
+  width: 184px;
+  font-size: 16px;
+  line-height: 1.2;
+  letter-spacing: -0.4488px;
+  color: rgba(0, 0, 0, 0.3);
+  animation: fade-in 0.4s ease-out;
+}
+/* Loading state — stands in for the "Flow Block" skeleton text in 293:11993 */
+.agent-card__thinking {
+  position: absolute;
+  left: calc(754px - 664px);
+  top: calc(914px - 866px + 4px);
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+.agent-card__thinking span {
+  height: 9px;
+  border-radius: 9px;
+  background: linear-gradient(110deg, rgba(229, 229, 229, 0.3) 4%, rgba(74, 74, 74, 0.3) 37%, rgba(255, 255, 255, 0.3) 72%);
+  background-size: 200% 100%;
+  animation: shimmer 1.2s linear infinite;
+}
+
+@keyframes shimmer {
+  from {
+    background-position: 100% 0;
+  }
+  to {
+    background-position: -100% 0;
+  }
+}
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+}
+@keyframes agent-in {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+}
+
+/* ---------- Compose window ---------- */
+.composer {
+  position: absolute;
+  left: 965px;
+  top: 531.21px;
+  width: 570px;
+  height: 538.79px;
+  z-index: 16;
+  overflow: hidden;
+  background: #fff;
+  border-radius: 16.427px;
+  box-shadow: 0 3.285px 3.285px 0 rgba(0, 0, 0, 0.25);
+  font-family: 'Inter', sans-serif;
+  font-variation-settings: normal;
+  animation: agent-in 0.3s ease-out;
+  transition: top 0.25s ease, height 0.25s ease;
+}
+.composer.is-min {
+  top: calc(531.21px + 538.79px - 43px);
+  height: 43px;
+}
+.composer__chrome {
+  position: absolute;
+  left: 0;
+  top: 0;
+  pointer-events: none;
+}
+.composer__title {
+  position: absolute;
+  left: 8.6px;
+  top: 0;
+  width: 456px;
+  height: 43px;
+  padding-left: 8.6px;
+  display: flex;
+  align-items: center;
+  background: #f2f6fc;
+  font-size: 14.6px;
+  font-weight: 500;
+  color: #1f1f1f;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  cursor: default;
+}
+.composer.is-min .composer__title {
+  cursor: pointer;
+}
+.composer__icon {
+  position: absolute;
+  top: 8.6px;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+}
+.composer__icon:hover,
+.composer__trash:hover {
+  background: rgba(31, 31, 31, 0.08);
+}
+.composer__field {
+  position: absolute;
+  left: 8.6px;
+  width: 548px;
+  height: 41px;
+  background: #fff;
+}
+.composer__field input {
+  width: 100%;
+  height: 100%;
+  padding-left: 8.6px;
+  outline: none;
+  font-family: inherit;
+  font-size: 13.8px;
+  color: #1f1f1f;
+}
+.composer__body-wrap {
+  position: absolute;
+  left: 8.6px;
+  top: 130px;
+  width: 548px;
+  height: 345px;
+  background: #fff;
+  overflow-y: auto;
+  scrollbar-width: none;
+}
+.composer__body-wrap::-webkit-scrollbar {
+  display: none;
+}
+.composer__body {
+  min-height: 100%;
+  padding: 15.38px 24px 16px 13.58px;
+  outline: none;
+  font-size: 13.141px;
+  line-height: 1.2;
+  letter-spacing: -0.3686px;
+  color: #1f1f1f;
+  caret-color: #1f1f1f;
+  transition: color 0.3s ease;
+}
+.composer__body p {
+  margin: 0;
+}
+.composer__body ul {
+  margin: 0;
+  padding-left: 19.71px;
+}
+.composer__body b {
+  font-weight: 600;
+}
+/* Ghost (AI suggestion) text as in 293:11993 */
+.composer__body--drafting,
+.composer__body--suggested {
+  color: rgba(0, 0, 0, 0.2);
+}
+.composer__body--drafting {
+  animation: draft-reveal 1.8s steps(24, end) both;
+}
+@keyframes draft-reveal {
+  from {
+    clip-path: inset(0 0 100% 0);
+  }
+  to {
+    clip-path: inset(0 0 0 0);
+  }
+}
+.composer__send {
+  position: absolute;
+  left: 17.2px;
+  top: 487.2px;
+  width: 77.5px;
+  height: 39.6px;
+  border-radius: 20px 0 0 20px;
+}
+.composer__send:hover:not(:disabled) {
+  background: rgba(255, 255, 255, 0.12);
+}
+.composer__send:disabled {
+  cursor: progress;
+}
+.composer__trash {
+  position: absolute;
+  left: 533.6px;
+  top: 492.3px;
+  width: 24px;
+  height: 26px;
+  border-radius: 50%;
+}
+
+.composer__send:active:not(:disabled) {
+  background: rgba(0, 0, 0, 0.14);
+}
+.composer__icon:active,
+.composer__trash:active {
+  background: rgba(31, 31, 31, 0.16);
+}
+.composer__field input:focus {
+  background: #fafbff;
+}
+
+/* ---------- Phone: window anchored to the bottom, scaled to the screen width ---------- */
+@media (max-width: 899px) {
+  .composer {
+    position: fixed;
+    left: 50%;
+    top: auto;
+    bottom: 76px;
+    z-index: 46;
+    transform-origin: bottom center;
+    animation: fade-in 0.2s ease-out;
+  }
+  .composer.is-min {
+    top: auto;
+  }
+  .agent-card {
+    position: fixed;
+    left: 50%;
+    top: 10px;
+    z-index: 46;
+    transform-origin: top center;
+    animation: fade-in 0.2s ease-out;
+  }
+  .composer__field input {
+    font-size: 16px;
+  }
+}
+
+/* "Message sent" snackbar */
+.mail-toast {
+  position: absolute;
+  left: 202px;
+  top: 1066px;
+  z-index: 17;
+  padding: 10px 18px;
+  background: #322a4c;
+  border-radius: 8px;
+  font-size: 14px;
+  color: #fff;
+  animation: agent-in 0.25s ease-out;
+}
+@media (max-width: 899px) {
+  .mail-toast {
+    position: fixed;
+    left: 16px;
+    right: 16px;
+    top: auto;
+    bottom: 84px;
+    z-index: 47;
+    text-align: center;
+  }
+}

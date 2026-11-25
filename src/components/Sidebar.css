@@ -1,0 +1,107 @@
+.sidebar {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 123px;
+  height: 1119px;
+  background: var(--primary);
+  z-index: 1;
+}
+
+.sidebar__indicator {
+  position: absolute;
+  left: 13px;
+  width: 131px;
+  height: 131px;
+  background: #fff;
+  border: var(--stroke-11) solid var(--primary);
+  border-radius: var(--radius-100);
+  transition: top 0.25s ease;
+}
+
+.sidebar__item {
+  position: absolute;
+  display: block;
+  border-radius: 50%;
+  transition: transform 0.12s ease, opacity 0.15s ease;
+}
+.sidebar__item img {
+  position: relative;
+}
+/* Hover / pressed halo behind the white icons */
+.sidebar__item::before {
+  content: '';
+  position: absolute;
+  inset: -12px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0);
+  transition: background 0.15s ease;
+}
+.sidebar__item:not([aria-current]):hover::before {
+  background: rgba(255, 255, 255, 0.14);
+}
+.sidebar__item:not([aria-current]):active {
+  transform: scale(0.92);
+}
+.sidebar__item:not([aria-current]):active::before {
+  background: rgba(255, 255, 255, 0.24);
+}
+.sidebar__item[aria-current] {
+  cursor: default;
+}
+.sidebar__item:focus-visible {
+  outline: none;
+}
+.sidebar__item:focus-visible::before {
+  box-shadow: 0 0 0 2px #fff;
+}
+
+/* Touch screens: no sticky hover halo, keep the press feedback */
+@media (hover: none) {
+  .sidebar__item:not([aria-current]):hover::before {
+    background: rgba(255, 255, 255, 0);
+  }
+}
+
+/* ---------- Phone: bottom tab bar ---------- */
+@media (max-width: 899px) {
+  .sidebar {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: auto;
+    bottom: 0;
+    width: auto;
+    height: 68px;
+    z-index: 40;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 12px env(safe-area-inset-bottom);
+    border-radius: 22px 22px 0 0;
+    box-shadow: 0 -4px 18px rgba(70, 60, 100, 0.18);
+  }
+  .sidebar__indicator {
+    display: none;
+  }
+  .sidebar__item {
+    position: relative;
+    left: auto !important;
+    top: auto !important;
+    width: 50px !important;
+    height: 50px !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .sidebar__item::before {
+    inset: 0;
+  }
+  .sidebar__item img {
+    width: 28px;
+    height: 28px;
+  }
+  .sidebar__item[aria-current]::before {
+    background: #fff;
+  }
+}

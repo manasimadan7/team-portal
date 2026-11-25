@@ -1,0 +1,113 @@
+/*
+ * Design tokens — mirrored 1:1 from Figma variables in "P1| PORTAL".
+ * Names follow the Figma variable path with "/" → "-".
+ * See DESIGN_SYSTEM.md at the project root for usage notes.
+ */
+:root {
+  /* ---------- Brand ---------- */
+  --primary: #7759b8;
+  --light-accent-l: #f4ebfb;
+  --dark-accent-l: #463c64;
+  --dark-accent-d: #322a4c;
+  --secondary: #d0bcff;
+  --color-neutral-0-248: #f8f4fb; /* lavender panel fill */
+  --surface-accent-alt-2: rgba(177, 143, 215, 0.1);
+  --surface-accent-alt-3: rgba(177, 143, 215, 0.15);
+  --surface-accent-alt-4: rgba(177, 143, 215, 0.3);
+  --text-strong-alt-2: #000000;
+  --text-inverse-primary: #cac4d0;
+  --text-default-alt-2: #49454f;
+  --surface-subtle-alt-3: #ece6f0;
+  /* Team page (263:3130) */
+  --surface-base-alt-1: #f6f8fa;
+  --surface-subtle-primary: #e8def8;
+  --surface-subtle-alt-7: #d1d9e0;
+  --surface-accent-alt-15: #59636e;
+  --border-alt-6: #d1d9e0;
+  --text-default-alt-5: #59636e;
+  --text-default-alt-6: #6750a4;
+  --text-strong-alt-1: #1f2328;
+  /* Company detail (139:4571) */
+  --text-default-alt-8: #7e6599;
+  --text-default-alt-12: #80828d;
+  --border-alt-2: #cac4d0;
+  /* Kanban (139:2340) */
+  --surface-subtle-alt-4: #d1cfff;
+
+  /* ---------- Surface ---------- */
+  --surface-base-primary: #ffffff;
+  --surface-accent-primary: rgba(0, 0, 0, 0.03); /* #00000008 */
+  --surface-accent-alt-1: #9378af;
+  --surface-subtle-alt-5: #eaddff;
+  --color-neutral-0: #ffffff;
+  --color-neutral-1000-a2: rgba(0, 0, 0, 0.02); /* #00000005 */
+  --color-neutral-1000-a3: rgba(0, 0, 0, 0.03); /* #00000008 */
+
+  /* ---------- Text ---------- */
+  --text-default-primary: #636363;
+  --text-default-alt-1: #4a4a4a;
+  --text-default-alt-3: #bbbbbb;
+  --text-default-alt-4: #625b71;
+  --text-default-alt-10: #7a78af;
+  --text-default-alt-13: #9878af;
+  --text-default-alt-14: #9591f8;
+  --text-default-alt-16: #166534;
+  --text-strong-primary: rgba(0, 0, 0, 0.3); /* #0000004d */
+  --text-list-headline: #7a6f85; /* raw value in design, no variable */
+  --text-list-supporting: #49454f; /* raw value in design, no variable */
+
+  /* ---------- Icon ---------- */
+  --icon-default-alt-2: #636363;
+  --icon-default-alt-3: #625b71;
+  --icon-inverse-primary: #ffffff;
+  --icon-inverse-alt-2: #d1cfff;
+  --icon-inverse-alt-3: #e2cfff;
+  --icon-inverse-alt-4: #ebcfff;
+  --icon-inverse-alt-5: #cfdaff;
+  --icon-default-alt-5: rgba(215, 143, 201, 0.1);
+  --icon-default-alt-7: rgba(143, 183, 215, 0.1);
+
+  /* ---------- Border ---------- */
+  --border-primary: #eaddff;
+  --border-alt-5: #9378af;
+  --border-alt-8: #bbbbbb;
+  --border-alt-9: rgba(177, 143, 215, 0.3);
+  --border-alt-12: #d9d9d9;
+  --border-alt-16: #eaeaea;
+
+  /* ---------- Status (pills / chips) ---------- */
+  --status-success-surface: #ecfdf3;
+
+  --status-contacted-bg: rgba(232, 161, 0, 0.1);
+  --status-contacted-fg: #e8a100;
+  --status-iaf-bg: rgba(67, 163, 94, 0.1);
+  --status-iaf-fg: #43a35e;
+  --status-uncontacted-bg: rgba(220, 38, 38, 0.12);
+  --status-uncontacted-fg: #dc264d;
+  --status-shortlist-bg: rgba(153, 164, 255, 0.2);
+  --status-shortlist-fg: #9591f8;
+  --status-reject-bg: rgba(210, 46, 46, 0.6);
+  --status-reject-fg: #ffffff;
+
+  /* ---------- Radius ---------- */
+  --radius-8: 8px;
+  --radius-10: 10px;
+  --radius-chart: 12.767px;
+  --radius-20: 20px;
+  --radius-pill: 28.889px;
+  --radius-30: 30px;
+  --radius-40: 40px;
+  --radius-button: 36.604px;
+  --radius-100: 100px;
+
+  /* ---------- Stroke ---------- */
+  --stroke-1: 1px;
+  --stroke-11: 11px;
+
+  /* ---------- Elevation ---------- */
+  --elevation-2: drop-shadow(0 2.928px 1.464px rgba(0, 0, 0, 0.25));
+
+  /* ---------- Typography ---------- */
+  --font-family: 'DM Sans', sans-serif;
+  --font-opsz: 'opsz' 14;
+}

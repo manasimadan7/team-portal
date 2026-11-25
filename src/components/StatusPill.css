@@ -1,0 +1,33 @@
+.status-pill {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14.444px;
+  width: 115px;
+  height: 41px;
+  padding: 7.222px 11px;
+  border-radius: var(--radius-pill);
+}
+
+.status-pill p {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: -0.4333px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.status-pill--contacted {
+  background: var(--status-contacted-bg);
+  color: var(--status-contacted-fg);
+}
+.status-pill--iaf-filled {
+  background: var(--status-iaf-bg);
+  color: var(--status-iaf-fg);
+}
+.status-pill--uncontacted {
+  background: var(--status-uncontacted-bg);
+  color: var(--status-uncontacted-fg);
+}

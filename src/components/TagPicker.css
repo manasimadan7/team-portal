@@ -1,0 +1,89 @@
+/* Not in Figma — built from the existing tokens (lavender surfaces, DM Sans, r10). */
+.tag-picker {
+  position: absolute;
+  z-index: 20;
+  width: 260px;
+  padding: 10px;
+  background: #fff;
+  border: 1px solid var(--border-alt-9);
+  border-radius: var(--radius-10);
+  box-shadow: 0 6px 24px rgba(70, 60, 100, 0.16);
+}
+.tag-picker__chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 8px;
+}
+.tag-picker__chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  height: 24px;
+  padding: 0 4px 0 10px;
+  background: var(--secondary);
+  border-radius: var(--radius-pill);
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--dark-accent-d);
+}
+.tag-picker__chip button {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  font-size: 14px;
+  line-height: 18px;
+  color: var(--dark-accent-d);
+}
+.tag-picker__chip button:hover {
+  background: rgba(50, 42, 76, 0.12);
+}
+.tag-picker__input {
+  width: 100%;
+  height: 34px;
+  padding: 0 10px;
+  border: 1px solid var(--border-alt-8);
+  border-radius: var(--radius-8);
+  outline: none;
+  font-size: 14px;
+  color: var(--text-default-alt-1);
+}
+.tag-picker__input:focus {
+  border-color: var(--primary);
+}
+.tag-picker__list {
+  list-style: none;
+  margin: 6px 0 0;
+  padding: 0;
+  max-height: 200px;
+  overflow-y: auto;
+}
+.tag-picker__list li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 8px;
+  border-radius: var(--radius-8);
+  font-size: 14px;
+  color: var(--text-default-alt-1);
+  cursor: pointer;
+}
+.tag-picker__list li.is-hi {
+  background: var(--light-accent-l);
+}
+.tag-picker__avatar {
+  width: 24px;
+  height: 24px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--surface-accent-alt-4);
+  border-radius: 50%;
+  font-size: 10px;
+  font-weight: 500;
+  color: var(--dark-accent-d);
+}
+.tag-picker__list li.tag-picker__empty {
+  cursor: default;
+  color: var(--text-default-primary);
+}

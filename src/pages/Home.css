@@ -1,0 +1,1270 @@
+/* All coordinates are Figma artboard px (frame 1728×1117, node 263:1720). */
+
+.home {
+  position: absolute;
+  inset: 0;
+}
+/* Grouping wrappers exist for the phone layout; on desktop children keep artboard coords */
+.rings,
+.ring-item,
+.funnel,
+.funnel-col,
+.bar-wrap {
+  display: contents;
+}
+
+/* ---------- Profile card (263:1850) ---------- */
+.profile {
+  position: absolute;
+  left: 194px;
+  top: 114px;
+  width: 646px;
+  height: 210px;
+  display: flex;
+  align-items: flex-start;
+  gap: 26px;
+  padding: 20px;
+  background: var(--surface-accent-primary);
+  border-radius: var(--radius-20);
+}
+.profile__avatar {
+  flex-shrink: 0;
+}
+.profile__card {
+  flex-shrink: 0;
+  width: 486px;
+  height: 171px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 17px 10px 52px 49px;
+  background: var(--surface-base-primary);
+  border-radius: var(--radius-10);
+  color: var(--text-default-alt-1);
+  line-height: 1.2;
+  letter-spacing: -0.3px;
+}
+.profile__head {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 253px;
+}
+.profile__head p {
+  width: 271px;
+}
+.profile__role {
+  height: 24px;
+}
+.profile__line {
+  height: 8px;
+  font-size: 16px;
+}
+
+/* ---------- Ring stats (265:6686…6709) ---------- */
+.ring {
+  position: absolute;
+  top: 373px;
+}
+.ring__value {
+  position: absolute;
+  top: 423.97px;
+  transform: translateX(-50%);
+  font-size: 13.779px;
+  line-height: 1.2;
+  letter-spacing: -0.3445px;
+  white-space: nowrap;
+}
+.ring__label {
+  position: absolute;
+  top: 499.04px;
+  width: 117.378px;
+  transform: translateX(-50%);
+  font-size: 16px;
+  line-height: 1.2;
+  letter-spacing: -0.4143px;
+  text-align: center;
+  color: var(--text-default-alt-1);
+}
+
+/* ---------- Funnel bars (263:1906…1919, 265:6675…6685) ---------- */
+.bar {
+  position: absolute;
+  background: var(--primary);
+  border-radius: var(--radius-chart);
+}
+.bar__value {
+  position: absolute;
+  font-size: 16px;
+  line-height: 1.2;
+  letter-spacing: -0.6989px;
+  color: var(--light-accent-l);
+}
+.bar__value--empty {
+  color: var(--primary);
+}
+/* coordinator dashboards: values computed, centred on the bar */
+.bar__value--center {
+  transform: translateX(-50%);
+  white-space: nowrap;
+  letter-spacing: -0.3px;
+}
+
+/* Coordinator dashboards: longer "<Name>'s Companies" title — let the search absorb the width */
+.home--member .companies__header {
+  right: 24px;
+}
+.home--member .search {
+  flex: 1 1 120px;
+  width: auto;
+  min-width: 120px;
+}
+
+/* ---------- Coordinator view header (not in Figma) ---------- */
+.member-bar {
+  position: absolute;
+  left: 194px;
+  top: 50px;
+  width: 1489px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.member-bar__back {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: -8px;
+}
+.member-bar__crumb {
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: -0.3px;
+  color: var(--text-default-primary);
+  transition: color 0.15s ease;
+}
+.member-bar__crumb:hover {
+  color: var(--primary);
+}
+.member-bar__crumb:active {
+  opacity: 0.7;
+}
+.member-bar__sep {
+  font-size: 20px;
+  color: var(--text-default-alt-3);
+}
+.member-bar__name {
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: -0.3px;
+  color: var(--text-default-alt-1);
+}
+.member-bar__msg {
+  margin-left: auto;
+  height: 38px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 18px;
+  background: var(--light-accent-l);
+  border-radius: 999px;
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--primary);
+  transition: filter 0.15s ease, transform 0.1s ease;
+}
+.member-bar__msg:hover {
+  filter: brightness(0.95);
+}
+.member-bar__msg:active {
+  filter: brightness(0.88);
+  transform: scale(0.96);
+}
+.bar__caption {
+  position: absolute;
+  top: 675.56px;
+  width: 103.411px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6.383px;
+  background: var(--color-neutral-1000-a3);
+  border-radius: var(--radius-chart);
+}
+.bar__caption p {
+  width: 77.877px;
+  font-size: 12.767px;
+  line-height: 1.2;
+  letter-spacing: -0.383px;
+  text-align: center;
+  color: #636363;
+}
+.bar__caption span {
+  display: block;
+}
+
+/* phone-only heading for the funnel card */
+.funnel__title {
+  display: none;
+}
+
+/* ---------- Funnel interaction (not in Figma) ---------- */
+.bar,
+.bar__caption {
+  transition: filter 0.18s ease, box-shadow 0.18s ease, transform 0.18s ease;
+}
+.funnel-hit {
+  position: absolute;
+  top: 540px;
+  height: 178px; /* bar column + caption */
+  z-index: 2;
+  padding: 0;
+  border: 0;
+  border-radius: var(--radius-chart);
+  background: transparent;
+  cursor: pointer;
+}
+.funnel-hit:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+.funnel.has-active .funnel-col:not(.is-active) .bar {
+  filter: saturate(0.35) opacity(0.4);
+}
+.funnel.has-active .funnel-col:not(.is-active) .bar__value,
+.funnel.has-active .funnel-col:not(.is-active) .bar__caption {
+  filter: opacity(0.5);
+}
+.funnel-col.is-active .bar {
+  filter: brightness(1.08);
+  box-shadow: 0 6px 16px rgba(103, 80, 164, 0.35);
+}
+.funnel-col.is-active .bar__caption {
+  background: var(--status-contacted-bg, rgba(103, 80, 164, 0.12));
+}
+.funnel-col.is-active .bar__caption p {
+  color: var(--text-default-alt-1);
+}
+
+.funnel-tip {
+  position: absolute;
+  z-index: 5;
+  width: 196px;
+  padding: 10px 12px;
+  transform: translate(-50%, -100%);
+  border-radius: 10px;
+  background: #1d1b20;
+  color: #fff;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+  pointer-events: none;
+  animation: funnel-tip-in 0.15s ease-out;
+  line-height: 1.25;
+}
+.funnel-tip--start {
+  transform: translate(-30%, -100%);
+}
+.funnel-tip--end {
+  transform: translate(-70%, -100%);
+}
+.funnel-tip__title {
+  margin: 0;
+  font-size: 12px;
+  opacity: 0.75;
+}
+.funnel-tip__value {
+  margin: 2px 0 6px;
+  font-size: 22px;
+  font-weight: 500;
+}
+.funnel-tip__row {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  margin: 0;
+  font-size: 12px;
+}
+.funnel-tip__row span {
+  opacity: 0.8;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.funnel-tip__row b {
+  font-weight: 500;
+}
+.funnel-tip__row--muted {
+  opacity: 0.7;
+}
+@keyframes funnel-tip-in {
+  from {
+    opacity: 0;
+    margin-top: 4px;
+  }
+}
+
+/* Status pill doubles as the status switch */
+.status-cycle {
+  padding: 0;
+  border: 0;
+  background: none;
+  border-radius: var(--radius-pill);
+  cursor: pointer;
+  transition: transform 0.1s ease, filter 0.15s ease;
+}
+.status-cycle:hover {
+  filter: brightness(0.95);
+}
+.status-cycle:active {
+  transform: scale(0.95);
+}
+.status-cycle:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+/* ---------- Notes (265:6657) ---------- */
+.notes {
+  position: absolute;
+  left: 194px;
+  top: 764px;
+  width: 646px;
+  height: 294px;
+  overflow: hidden;
+  background: var(--color-neutral-1000-a2);
+  border-radius: var(--radius-20);
+}
+.notes__title {
+  position: absolute;
+  left: 68px;
+  top: 32px;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  color: var(--text-default-alt-1);
+}
+.notes__open {
+  position: absolute;
+  left: 580px;
+  top: 25px;
+  width: 44px;
+  height: 44px;
+}
+.notes__open img {
+  transition: transform 0.2s ease;
+}
+.notes__open.is-on img {
+  transform: rotate(45deg); /* plus → × while the add-note form is open */
+}
+.notes__list {
+  position: absolute;
+  left: 29px;
+  top: 83px;
+  width: 595px;
+  max-height: 197px;
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(177, 143, 215, 0.4) transparent;
+  font-size: 16px;
+  line-height: 1.2;
+  letter-spacing: -0.3px;
+  white-space: nowrap;
+}
+.notes__row {
+  position: relative;
+  flex-shrink: 0;
+  width: 100%;
+  height: 53px;
+  overflow: hidden;
+  background: var(--color-neutral-0);
+  border-radius: var(--radius-10);
+  transition: box-shadow 0.15s ease;
+}
+.notes__row:nth-of-type(2) {
+  height: 52px;
+}
+.notes__row:hover {
+  box-shadow: 0 0 0 1px var(--light-accent-l), 0 2px 6px rgba(70, 60, 100, 0.06);
+}
+.notes__company {
+  position: absolute;
+  left: 13px;
+  top: 17px;
+  font-weight: 500;
+  color: var(--text-default-alt-4);
+}
+.notes__text {
+  position: absolute;
+  left: 300px;
+  top: 17px;
+  color: var(--text-default-primary);
+}
+.notes__done {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  width: 28px;
+  height: 28px;
+  margin-top: -14px;
+  border-radius: 50%;
+  font-size: 14px;
+  color: var(--surface-accent-alt-1);
+  opacity: 0;
+  transition: opacity 0.15s ease, background 0.15s ease, transform 0.1s ease;
+}
+.notes__row:hover .notes__done,
+.notes__done:focus-visible {
+  opacity: 1;
+}
+.notes__done:hover {
+  background: var(--light-accent-l);
+}
+.notes__done:active {
+  transform: scale(0.9);
+}
+.notes__form {
+  flex-shrink: 0;
+  display: flex;
+  gap: 8px;
+  padding: 8px;
+  background: var(--color-neutral-0);
+  border: 1px solid var(--light-accent-l);
+  border-radius: var(--radius-10);
+}
+.notes__form input {
+  min-width: 0;
+  height: 36px;
+  padding: 0 12px;
+  border: 1px solid var(--border-alt-8);
+  border-radius: var(--radius-8);
+  outline: none;
+  font-size: 14px;
+  color: var(--text-default-alt-1);
+}
+.notes__form input[name='company'] {
+  width: 180px;
+}
+.notes__form input[name='note'] {
+  flex: 1;
+}
+.notes__empty {
+  padding: 16px 13px;
+  color: var(--text-default-primary);
+}
+
+/* ---------- My Companies panel (263:1722) ---------- */
+.companies {
+  position: absolute;
+  left: 879px;
+  top: 114px;
+  width: 804px;
+  height: 944px;
+  overflow: hidden;
+  background: var(--color-neutral-0);
+  border-radius: var(--radius-20);
+}
+/* Figma strokes are drawn inside without shifting children */
+.companies::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border: var(--stroke-1) solid var(--light-accent-l);
+  border-radius: inherit;
+  pointer-events: none;
+}
+
+.companies__header {
+  position: absolute;
+  left: 37px;
+  top: 40px;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+.companies__title {
+  white-space: nowrap;
+  color: var(--text-default-alt-1);
+}
+
+.search {
+  flex-shrink: 0;
+  width: 323px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  background: var(--surface-base-primary);
+  border: var(--stroke-1) solid var(--border-alt-8);
+  border-radius: var(--radius-8);
+  cursor: text;
+}
+.search input {
+  flex: 1;
+  min-width: 0;
+  outline: none;
+  font-size: 12px;
+  line-height: 1.3;
+  color: var(--text-default-primary);
+}
+.search input::placeholder {
+  color: var(--text-default-primary);
+  opacity: 1;
+}
+
+.view-toggle {
+  position: relative;
+  flex-shrink: 0;
+  width: 33.676px;
+  height: 33.676px;
+  border-radius: 50%;
+}
+.view-toggle__bg {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.view-toggle__bg--shadow {
+  left: -2.928px;
+}
+.view-toggle__list {
+  position: absolute;
+  left: 8.05px;
+  top: 8.05px;
+  width: 18.302px;
+  height: 16.838px;
+  display: flex;
+  flex-direction: column;
+  gap: 7.321px;
+  background: var(--surface-base-primary);
+}
+.view-toggle__list span {
+  flex: 1 0 0;
+  background: var(--surface-accent-alt-1);
+}
+.view-toggle__table {
+  position: absolute;
+  left: 7.32px;
+  top: 8.05px;
+}
+
+/* ---------- List | Kanban toggle (not in Figma — uses the Figma list bars + table glyph) ---------- */
+.companies__header {
+  right: 24px;
+}
+.companies__header .search {
+  flex: 1 1 140px;
+  width: auto;
+  min-width: 140px;
+}
+.view-switch {
+  flex-shrink: 0;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  padding: 3px;
+  background: var(--light-accent-l);
+  border-radius: 999px;
+}
+.view-switch__opt {
+  height: 28px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0 11px;
+  border-radius: 999px;
+  font-size: 12.5px;
+  font-weight: 500;
+  color: var(--text-default-alt-4);
+  white-space: nowrap;
+  transition: background 0.15s ease, color 0.15s ease, box-shadow 0.15s ease, transform 0.1s ease;
+}
+.view-switch__opt:not(.is-active):hover {
+  background: rgba(255, 255, 255, 0.6);
+  color: var(--primary);
+}
+.view-switch__opt:not(.is-active):active {
+  transform: scale(0.95);
+}
+.view-switch__opt.is-active {
+  background: #fff;
+  color: var(--primary);
+  box-shadow: 0 1px 3px rgba(70, 60, 100, 0.18);
+  cursor: default;
+}
+.view-switch__bars {
+  width: 14px;
+  height: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.view-switch__bars span {
+  height: 4px;
+  background: var(--surface-accent-alt-1);
+}
+
+.add-company {
+  flex-shrink: 0;
+  width: 114.206px;
+  height: 33.676px;
+  display: flex;
+  align-items: center;
+  gap: 6.589px;
+  padding: 0 8.785px;
+  background: var(--surface-base-primary);
+  border-radius: var(--radius-button);
+  filter: var(--elevation-2);
+  font-size: 11.713px;
+  line-height: 1.2;
+  letter-spacing: -0.2196px;
+  white-space: nowrap;
+  color: var(--text-default-alt-4);
+}
+.add-company img {
+  flex-shrink: 0;
+  transition: transform 0.2s ease;
+}
+.add-company.is-on img {
+  transform: rotate(45deg);
+}
+
+.companies__open {
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+}
+
+/* Add Company popover (not in Figma) */
+.add-form {
+  position: absolute;
+  left: 452px;
+  top: 82px;
+  z-index: 5;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 16px;
+  background: #fff;
+  border: 1px solid var(--border-alt-9);
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(70, 60, 100, 0.18);
+  animation: pop-in 0.15s ease-out;
+}
+.add-form__title {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--text-default-alt-1);
+}
+.add-form input {
+  height: 38px;
+  padding: 0 12px;
+  border: 1px solid var(--border-alt-8);
+  border-radius: var(--radius-8);
+  outline: none;
+  font-size: 14px;
+  color: var(--text-default-alt-1);
+}
+.add-form__actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+}
+@keyframes pop-in {
+  from {
+    opacity: 0;
+    transform: translateY(-6px) scale(0.98);
+  }
+}
+
+/* ---------- Filter chips (263:1829) — chip styles: components/StatusChips.css ---------- */
+.chips {
+  position: absolute;
+  left: 24px;
+  top: 102px;
+  height: 41px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+/* ---------- Company list (266:6987 …) ---------- */
+.companies__list {
+  position: absolute;
+  left: 0;
+  top: 169px;
+  width: 804px;
+  bottom: 0;
+  padding-bottom: 24px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-width: none;
+}
+.companies__list::-webkit-scrollbar {
+  display: none;
+}
+
+.company-item {
+  width: 766px;
+  margin-left: 8px;
+  margin-bottom: 5px;
+  border-radius: 12px;
+  transition: background 0.15s ease;
+}
+.company-item.is-open {
+  background: rgba(244, 235, 251, 0.5);
+}
+.company-row {
+  width: 766px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  border-radius: 12px;
+  transition: background 0.15s ease;
+}
+.company-item:not(.is-open) .company-row:hover {
+  background: #fcfaff;
+}
+.company-row__text {
+  flex-shrink: 0;
+  width: 426px;
+  min-height: 88px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 12px 24px;
+}
+.company-row__headline {
+  height: 25px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: 0.25px;
+  color: var(--text-list-headline);
+}
+.company-row__supporting {
+  width: 212px;
+  height: 43px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.25px;
+  color: var(--text-list-supporting);
+}
+.company-row__right {
+  flex-shrink: 0;
+  width: 331px;
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+.company-row__actions {
+  flex-shrink: 0;
+  width: 116px;
+  height: 99px;
+  display: flex;
+  align-items: center;
+  gap: 19px;
+  padding: 0 20px;
+  border-radius: var(--radius-10);
+}
+.company-row__actions button {
+  flex-shrink: 0;
+  display: block;
+}
+.company-row__toggle img {
+  transition: transform 0.2s ease;
+}
+.company-item.is-open .company-row__toggle img {
+  transform: rotate(180deg);
+}
+
+/* Expanded row: status + history */
+.company-item__more {
+  padding-bottom: 4px;
+}
+.status-picker {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 24px 14px;
+}
+.status-picker__label {
+  margin-right: 4px;
+  font-size: 14px;
+  color: var(--text-default-primary);
+}
+.status-picker__opt {
+  height: 30px;
+  padding: 0 14px;
+  border-radius: var(--radius-pill);
+  background: var(--color-neutral-1000-a3);
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-default-primary);
+  transition: background 0.15s ease, color 0.15s ease, transform 0.1s ease;
+}
+.status-picker__opt:hover {
+  background: rgba(0, 0, 0, 0.06);
+}
+.status-picker__opt:active {
+  transform: scale(0.96);
+}
+.status-picker__opt--contacted.is-on {
+  background: var(--status-contacted-bg);
+  color: var(--status-contacted-fg);
+}
+.status-picker__opt--iaf-filled.is-on {
+  background: var(--status-iaf-bg);
+  color: var(--status-iaf-fg);
+}
+.status-picker__opt--uncontacted.is-on {
+  background: var(--status-uncontacted-bg);
+  color: var(--status-uncontacted-fg);
+}
+
+/* Compact (table) view */
+.companies__list.is-compact .company-row__text {
+  min-height: 0;
+  flex-direction: row;
+  align-items: center;
+  gap: 16px;
+  padding: 8px 24px;
+}
+/* date beside the company name — smaller and muted so the name leads */
+.company-row__date {
+  margin-left: 8px;
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 0;
+  color: var(--text-default-alt-4);
+}
+.companies__list.is-compact .company-row__headline {
+  flex-shrink: 0;
+  font-size: 17px;
+}
+.companies__list.is-compact .company-row__supporting {
+  height: auto;
+  width: 150px;
+  font-size: 13px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
+}
+.companies__list.is-compact .company-row__actions {
+  height: 56px;
+}
+.companies__list.is-compact .company-item {
+  margin-bottom: 0;
+  border-bottom: 1px solid #f4f0f8;
+  border-radius: 0;
+}
+
+.companies__empty {
+  padding: 24px 32px;
+  font-size: 16px;
+  color: var(--text-default-primary);
+}
+
+/* =================================================================
+   Phone layout
+   ================================================================= */
+@media (max-width: 899px) {
+  .home {
+    position: static;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 16px;
+  }
+
+  .profile {
+    position: static;
+    width: auto;
+    height: auto;
+    align-items: center;
+    gap: 14px;
+    padding: 14px;
+  }
+  .profile__avatar {
+    width: 64px;
+    height: 64px;
+  }
+  .profile__card {
+    flex: 1;
+    width: auto;
+    height: auto;
+    gap: 6px;
+    padding: 14px 16px;
+  }
+  .profile__head {
+    width: auto;
+    gap: 2px;
+    font-size: 19px;
+  }
+  .profile__head p {
+    width: auto;
+  }
+  .profile__role {
+    height: auto;
+    font-size: 15px;
+    color: var(--text-default-primary);
+  }
+  .profile__line {
+    height: auto;
+    font-size: 13px;
+  }
+
+  /* Phone hierarchy: profile → outreach funnel → ring stats → notes.
+     "My Companies" lives under Companies → Assigned on phones, so it's dropped from Home
+     (a coordinator's own dashboard keeps theirs, since it isn't reachable elsewhere). */
+  .member-bar {
+    order: 0;
+  }
+  .profile {
+    order: 1;
+  }
+  .funnel {
+    order: 2;
+  }
+  .rings {
+    order: 3;
+  }
+  .notes {
+    order: 4;
+  }
+  .home:not(.home--member) .companies {
+    display: none;
+  }
+
+  /* four rings on one row */
+  .rings {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 8px 4px;
+    padding: 14px 6px;
+    background: var(--surface-base-primary, #fff);
+    border-radius: 16px;
+  }
+  .ring-item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    min-width: 0;
+  }
+  .ring {
+    position: static;
+    width: 62px;
+    height: 62px;
+  }
+  .ring__value {
+    left: 50% !important;
+    top: 31px;
+    transform: translate(-50%, -50%);
+    font-size: 13px;
+    font-weight: 500;
+  }
+  .ring__label {
+    position: static;
+    width: auto;
+    transform: none;
+    font-size: 11px;
+    line-height: 1.2;
+    letter-spacing: 0;
+  }
+
+  /* funnel as a titled card, first thing after the profile */
+  .funnel {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    gap: 6px;
+    padding: 14px 12px 12px;
+    background: var(--surface-base-primary, #fff);
+    border-radius: 16px;
+  }
+  .funnel__title {
+    display: block;
+    flex: 1 1 100%;
+    margin: 0 0 6px;
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--text-default-alt-1);
+  }
+  .funnel-hit {
+    left: 0 !important;
+    top: 0;
+    width: 100% !important;
+    height: 100%;
+  }
+  .funnel-tip {
+    left: 50% !important;
+    top: auto !important;
+    bottom: calc(100% + 8px);
+    width: 168px;
+    transform: translateX(-50%);
+  }
+  .funnel-tip--start {
+    left: 0 !important;
+    transform: none;
+  }
+  .funnel-tip--end {
+    left: auto !important;
+    right: 0;
+    transform: none;
+  }
+  .funnel-col {
+    position: relative;
+    flex: 1 1 0;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 6px;
+  }
+  .bar-wrap {
+    position: relative;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 4px;
+  }
+  .bar {
+    position: static;
+    width: 100% !important;
+  }
+  .bar__value,
+  .bar__value--center {
+    position: static;
+    transform: none;
+    font-size: 13px;
+    letter-spacing: 0;
+    color: var(--primary);
+  }
+  .home--member .search,
+  .companies__header .search {
+    flex: 1 1 100%;
+  }
+  .member-bar {
+    position: static;
+    width: auto;
+    height: auto;
+    flex-wrap: wrap;
+    gap: 6px 8px;
+  }
+  .member-bar__crumb,
+  .member-bar__sep,
+  .member-bar__name {
+    font-size: 16px;
+  }
+  .member-bar__msg {
+    margin-left: 0;
+    width: 100%;
+    justify-content: center;
+    height: 42px;
+  }
+  .bar__caption {
+    position: static;
+    width: 100%;
+    min-height: 40px;
+    padding: 4px 2px;
+  }
+  .bar__caption p {
+    width: auto;
+    font-size: 10px;
+    letter-spacing: 0;
+  }
+
+  .notes {
+    position: relative;
+    left: auto;
+    top: auto;
+    width: auto;
+    height: auto;
+    padding: 16px;
+  }
+  .notes__title {
+    position: static;
+    transform: none;
+    margin-bottom: 12px;
+    font-size: 20px;
+  }
+  .notes__open {
+    top: 8px;
+    left: auto;
+    right: 8px;
+    transform: scale(0.8);
+  }
+  .notes__list {
+    position: static;
+    width: auto;
+    max-height: 320px;
+    gap: 8px;
+    white-space: normal;
+    font-size: 14px;
+  }
+  .notes__row,
+  .notes__row:nth-of-type(2) {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 12px 44px 12px 12px;
+  }
+  .notes__company,
+  .notes__text {
+    position: static;
+  }
+  .notes__done {
+    opacity: 1;
+    width: 40px;
+    height: 40px;
+    margin-top: -20px;
+    right: 4px;
+  }
+  .notes__form {
+    flex-wrap: wrap;
+  }
+  .notes__form input[name='company'],
+  .notes__form input[name='note'] {
+    width: 100%;
+    flex: 1 1 100%;
+  }
+
+  .companies {
+    position: relative;
+    left: auto;
+    top: auto;
+    width: auto;
+    height: auto;
+    overflow: visible;
+    padding-bottom: 8px;
+  }
+  .companies__header {
+    position: static;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 16px 16px 8px;
+  }
+  .companies__title {
+    flex: 1 0 auto;
+    font-size: 20px;
+  }
+  .search {
+    order: 5;
+    width: 100%;
+    height: 40px;
+  }
+  .search input {
+    font-size: 14px;
+  }
+  .add-form {
+    position: static;
+    width: auto;
+    margin: 4px 16px 8px;
+    box-shadow: none;
+  }
+  .chips {
+    position: static;
+    padding: 4px 16px 12px;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+  .chips::-webkit-scrollbar {
+    display: none;
+  }
+  .companies__list {
+    position: static;
+    width: auto;
+    padding: 0 8px 8px;
+    overflow: visible;
+  }
+  .company-item {
+    width: auto;
+    margin: 0 0 6px;
+    border: 1px solid #f4f0f8;
+  }
+  .company-row {
+    width: auto;
+    flex-wrap: wrap;
+    gap: 0;
+  }
+  .company-row__text {
+    width: 100%;
+    min-height: 0;
+    padding: 12px 14px 4px;
+    gap: 4px;
+  }
+  .company-row__headline {
+    height: auto;
+    font-size: 17px;
+  }
+  .company-row__supporting {
+    width: auto;
+    height: auto;
+    font-size: 14px;
+  }
+  .company-row__right {
+    width: 100%;
+    justify-content: space-between;
+    gap: 8px;
+    padding: 4px 6px 8px 14px;
+  }
+  .status-pill {
+    width: auto;
+    height: 32px;
+    padding: 4px 14px;
+  }
+  .status-pill p {
+    font-size: 14px;
+  }
+  .company-row__actions {
+    width: auto;
+    height: auto;
+    gap: 6px;
+    padding: 0;
+  }
+  .company-row__actions button {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .company-row__actions img {
+    width: 26px;
+    height: 26px;
+  }
+  .status-picker {
+    flex-wrap: wrap;
+    padding: 4px 14px 12px;
+  }
+  .companies__list.is-compact .company-row__text {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+  }
+  .companies__list.is-compact .company-row__supporting {
+    width: auto;
+  }
+  .companies__list.is-compact .company-item {
+    border-radius: 12px;
+    margin-bottom: 6px;
+  }
+}
